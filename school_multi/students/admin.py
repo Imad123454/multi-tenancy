@@ -4,7 +4,7 @@ from .models import Student
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     list_display = ['name', 'age', 'tenant']
-    list_filter = ['tenant']  # ye dropdown/sidebar filter add karega
+    list_filter = ['tenant'] 
 
     def get_queryset(self, request):
         qs = super().get_queryset(request)
